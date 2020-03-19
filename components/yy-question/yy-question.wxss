@@ -1,0 +1,182 @@
+/* components/yy-question/yy-question.wxss */
+/* 引入阿里巴巴UI字体 */
+@import "/static/iconfont.wxss";
+
+@import "/static/animate.wxss";
+
+/* 颜色配置 */
+
+.page-color {
+    --main: #0cf;
+    --active: rgb(236, 236, 236);
+    --gray: gray;
+}
+
+/* 外框 */
+
+.out {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 问题 */
+
+/* 问题卡 */
+
+.question-card {
+    width: 90vw;
+    box-sizing: border-box;
+    padding: 35rpx;
+    border-radius: 10rpx;
+    box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 8px 1px;
+    animation-duration: 0.3s;
+}
+
+/* 问题标题 */
+
+.question-title {
+    color: var(--main);
+    margin-bottom: 30rpx;
+}
+
+/* 问题选项 */
+
+.question-radio {
+    display: block;
+    padding: 10rpx;
+    border: 1rpx var(--active) solid;
+    margin: 10rpx 0;
+    border-radius: 10rpx;
+}
+
+.question-radio:active {
+    background-color: var(--active);
+}
+
+/* 问题上/下一个 */
+
+.question-btn {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+}
+
+.question-btn view {
+    text-align: center;
+    margin: 30rpx;
+    width: 20vw;
+    padding: 20rpx 40rpx;
+    background-color: var(--main);
+    color: white;
+    border-radius: 15rpx;
+}
+
+/* 问题菜单 */
+
+.all-question {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.all-question-btn {
+    position: relative;
+    margin: 5vw;
+}
+
+.all-question-btn::before {
+    content: "\e637";
+    color: var(--main);
+    font-size: 60rpx;
+    font-weight: bolder;
+}
+
+.all-question-btn:active {
+    background-color: var(--active);
+}
+
+.all-question-btn-text {
+    position: absolute;
+    bottom: -50rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    font-size: 28rpx;
+}
+
+/* 弹出框 */
+
+.pop-out {
+    height: 100%;
+    box-sizing: border-box;
+    padding: 50rpx 40rpx 40rpx 40rpx;
+}
+
+.all-question-title>view {
+    position: relative;
+    width: 30rpx;
+    height: 30rpx;
+    border-radius: 10rpx;
+}
+
+.all-question-title>view:nth-child(1) {
+    background-color: var(--main);
+}
+
+.all-question-title>view:nth-child(1)::after {
+    position: absolute;
+    content: '已填写';
+    right: -120rpx;
+    font-size: 28rpx;
+    line-height: 30rpx;
+}
+
+.all-question-title>view:nth-child(2) {
+    background-color: var(--gray);
+}
+
+.all-question-title>view:nth-child(2)::before {
+    position: absolute;
+    content: '未填写';
+    left: -120rpx;
+    font-size: 28rpx;
+    line-height: 30rpx;
+}
+
+/* 弹出框标题 */
+
+.all-question-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50rpx;
+}
+
+.all-question-items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1fr);
+    row-gap: 40rpx;
+    height: 27vh;
+    overflow: auto;
+}
+
+.all-question-item {
+    width: 80rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    color: white;
+    border-radius: 15rpx;
+}
+
+.answer-after {
+    background-color: var(--main);
+}
+
+.answer-before {
+    background-color: var(--gray);
+}

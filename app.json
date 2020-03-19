@@ -1,0 +1,15 @@
+{
+    "pages": [
+        "pages/user/user",
+        "pages/res/res",
+        "pages/forecast/forecast",
+        "pages/index/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#0cf",
+        "navigationBarTextStyle": "white"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

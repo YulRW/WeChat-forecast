@@ -1,0 +1,4 @@
+/* 引入阿里巴巴UI字体 */
+@import "/static/iconfont.wxss";
+
+@import "/static/animate.wxss";

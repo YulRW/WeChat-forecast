@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "yy-question":"/components/yy-question/yy-question"
+    },
+    "navigationBarTitleText": "录入"
+}

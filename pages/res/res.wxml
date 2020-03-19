@@ -1,0 +1,6 @@
+<view class='title'>预测结果</view>
+
+
+<view class="test">
+    <button class="btn" bindtap="back" type="default">返回主页</button>
+</view>

@@ -1,0 +1,59 @@
+<view class="page-color out">
+    <!-- 问题卡 -->
+    <view class="question-card  animated {{questionShowAnimate}}" bindanimationend='animateEnd'>
+
+        <!-- 问题标题 -->
+        <view class="question-title">{{index + 1}}. 单选题：{{questionData[index].title}}</view>
+
+        <!-- 问题选项 -->
+        <radio-group bindchange="selectChange">
+            <radio class="question-radio" wx:for="{{questionData[index].question}}" wx:for-index='i' wx:key="*this" value="{{i}}" checked="{{answer[index] == i ? true : false}}" color='var(--main)'>
+                <text>{{item}}</text>
+            </radio>
+        </radio-group>
+    </view>
+
+
+
+    <!-- 选项 -->
+    <view class="question-btn">
+        <block wx:if='{{!(index === 0)}}'>
+            <view bindtap="pre">上一题</view>
+        </block>
+
+        <block wx:if='{{!(index === questionData.length - 1)}}'>
+            <view bindtap="next">下一题</view>
+        </block>
+
+        <block wx:if='{{questionData.length - 1 === index}}'>
+            <view bindtap="submit">提交</view>
+        </block>
+    </view>
+
+    <!-- 问题菜单 -->
+    <view class="all-question">
+        <!-- 菜单按钮 -->
+        <view class="all-question-btn iconfont" bindtap="handleAllQuestion">
+            <!-- 题数和当前题数 -->
+            <text class="all-question-btn-text">{{index + 1}}/{{questionData.length}}</text>
+        </view>
+
+    </view>
+
+    <!-- 问题集弹出层 -->
+    <van-popup show="{{ showAllQuestion }}" round position="bottom" bind:close="handleAllQuestion" custom-style="height: 40%" duration='100'>
+        <view class="pop-out">
+            <view class="all-question-title">
+                <view></view>
+                <view></view>
+            </view>
+            <view class="all-question-items">
+
+                <block wx:for='{{answer}}' wx:key='i'>
+                    <view class="all-question-item {{item !== -1 ? 'answer-after' : 'answer-before' }}" data-id="{{index}}" bindtap="selectQuestion">{{index+1}}</view>
+                </block>
+
+            </view>
+        </view>
+    </van-popup>
+</view>
