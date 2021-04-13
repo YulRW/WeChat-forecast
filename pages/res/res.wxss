@@ -18,3 +18,10 @@
     bottom: 0;
     text-align: center;
 }
+
+.text{
+    color: #1ae8c8;
+    font-size: 65rpx;
+    text-align: center;
+    margin-top: 20vh;
+}

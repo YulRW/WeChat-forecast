@@ -14,7 +14,7 @@
     </view>
     <view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg radius">
 
-        <view class="cu-item arrow">
+        <view class="cu-item arrow" wx:if='{{true}}'>
             <navigator class="content" url="/pages/forecast/forecast" hover-class="none">
                 <image src="/assets/yuce.png" class="png luru" mode="aspectFit"></image>
                 <text class="text-grey">预测</text>
@@ -36,4 +36,6 @@
         </view>
 
     </view>
+
+    <view class="temp" bindtap="showToast"></view>
 </scroll-view>

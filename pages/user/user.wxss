@@ -70,3 +70,15 @@ map,.mapBox{
 view button{
     font-weight: normal;
 }
+
+
+
+/* 临时 */
+.temp{
+    height: 20px;
+    width: 20px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: transparent;
+}

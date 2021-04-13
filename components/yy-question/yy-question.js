@@ -4,12 +4,13 @@ Component({
      * 组件的属性列表
      */
     properties: {
-        question:{
-            type:Array,
-            observer:function(newVal,oldVal){
+        question: {
+            type: Array,
+            observer: function(newVal, oldVal) {
                 this.setData({
-                    questionData:newVal
+                    questionData: newVal
                 })
+                this.refreshAnswer()
             },
         }
 
@@ -19,7 +20,7 @@ Component({
      * 组件的初始数据
      */
     data: {
-        
+
 
         // 当前问题
         index: 0,
@@ -39,6 +40,18 @@ Component({
      * 组件的方法列表
      */
     methods: {
+        refreshAnswer() {
+            let len = this.data.questionData.length;
+            let answer = new Array(len);
+
+            for (let i = 0; i < len; i++) {
+                answer[i] = -1
+            }
+
+            this.setData({
+                answer: answer
+            })
+        },
         handleAllQuestion() {
             this.setData({
                 showAllQuestion: !this.data.showAllQuestion
@@ -100,24 +113,16 @@ Component({
 
         // 提交——》触发外部函数
         submit() {
-            this.triggerEvent('submit',{},{});
+            let data = this.data.answer
+            this.triggerEvent('submit', data, {});
         },
 
     },
+
     lifetimes: {
         attached: function() {
             // 在组件实例进入页面节点树时执行
-            let len = this.data.questionData.length;
-            let answer = new Array(len);
-
-            for (let i = 0; i < len; i++) {
-                answer[i] = -1
-            }
-            console.log(answer)
-
-            this.setData({
-                answer: answer
-            })
+            this.refreshAnswer()
         },
 
     },

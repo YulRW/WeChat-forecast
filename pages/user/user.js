@@ -11,5 +11,11 @@ Page({
     },
     onShareAppMessage(){
 
-    }
+    },
+    showToast(){
+        wx.showToast({
+            title: '饼',
+            icon: 'none',
+        })
+    },
 })

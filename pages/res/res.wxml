@@ -1,6 +1,6 @@
 <view class='title'>预测结果</view>
 
-
+<view class="text">你{{res===0?'喜欢':'不喜欢'}}计算机专业</view>
 <view class="test">
     <button class="btn" bindtap="back" type="default">返回主页</button>
 </view>

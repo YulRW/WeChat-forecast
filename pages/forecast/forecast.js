@@ -2,6 +2,10 @@
 //获取应用实例
 const app = getApp()
 
+const g = app.globalData;
+
+const yy = app.yy;
+
 Page({
     data: {
         questionData: [{
@@ -19,222 +23,19 @@ Page({
                     '计算机学院',
                 ]
             },
-            {
-                title: '词汇丰富，表达能力超出一般。',
-                question: [
-                    '完全符合',
-                    '大致符合',
-                    '部分符合',
-                    '小部分符合',
-                    '完全不符合',
-                ]
-            },
-            {
-                title: '喜欢思考、讨论科技或数学方面的问题。',
-                question: [
-                    '完全符合',
-                    '大致符合',
-                    '部分符合',
-                    '小部分符合',
-                    '完全不符合',
-                ]
-            },
-            {
-                title: '喜欢用图表来解释说明。',
-                question: [
-                    '完全符合',
-                    '大致符合',
-                    '部分符合',
-                    '小部分符合',
-                    '完全不符合',
-                ]
-            },
-            {
-                title: '肢体动作协调，姿态优雅。',
-                question: [
-                    '完全符合',
-                    '大致符合',
-                    '部分符合',
-                    '小部分符合',
-                    '完全不符合',
-                ]
-            },
-            {
-                title: '很喜欢关心、欣赏、谈论音乐方面的信息。',
-                question: [
-                    '完全符合',
-                    '大致符合',
-                    '部分符合',
-                    '小部分符合',
-                    '完全不符合',
-                ]
-            },
-            {
-                title: '到户外活动，能够细心观察自然景物，喜好发问、思考。',
-                question: [
-                    '完全符合',
-                    '大致符合',
-                    '部分符合',
-                    '小部分符合',
-                    '完全不符合',
-                ]
-            },
-            {
-                title: '经常参加群体聚会活动。',
-                question: [
-                    '完全符合',
-                    '大致符合',
-                    '部分符合',
-                    '小部分符合',
-                    '完全不符合',
-                ]
-            },
-            {
-                title: '非常了解自己的优点和缺点。',
-                question: [
-                    '完全符合',
-                    '大致符合',
-                    '部分符合',
-                    '小部分符合',
-                    '完全不符合',
-                ]
-            },
-            {
-                title: '能准确记得自己读过的文章或听过的话。',
-                question: [
-                    '完全符合',
-                    '大致符合',
-                    '部分符合',
-                    '小部分符合',
-                    '完全不符合',
-                ]
-            },
-            {
-                title: '计算能力优异，数字感良好。',
-                question: [
-                    '完全符合',
-                    '大致符合',
-                    '部分符合',
-                    '小部分符合',
-                    '完全不符合',
-                ]
-            },
-            {
-                title: '空间目测能力良好。',
-                question: [
-                    '完全符合',
-                    '大致符合',
-                    '部分符合',
-                    '小部分符合',
-                    '完全不符合',
-                ]
-            },
-            {
-                title: '说话时，善于使用肢体和手势来表达意见及情感。',
-                question: [
-                    '完全符合',
-                    '大致符合',
-                    '部分符合',
-                    '小部分符合',
-                    '完全不符合',
-                ]
-            },
-            {
-                title: '很会唱歌、吹口哨、哼曲子或打拍子等。',
-                question: [
-                    '完全符合',
-                    '大致符合',
-                    '部分符合',
-                    '小部分符合',
-                    '完全不符合',
-                ]
-            },
-            {
-                title: '对大自然界有浓厚兴趣，很愿意关心、思考、从事有关自然界的事务。',
-                question: [
-                    '完全符合',
-                    '大致符合',
-                    '部分符合',
-                    '小部分符合',
-                    '完全不符合',
-                ]
-            },
-            {
-                title: '朋友很多。',
-                question: [
-                    '完全符合',
-                    '大致符合',
-                    '部分符合',
-                    '小部分符合',
-                    '完全不符合',
-                ]
-            },
-            {
-                title: '会自觉地朝自己的目标努力，不需要外部的奖惩或约束来督促。',
-                question: [
-                    '完全符合',
-                    '大致符合',
-                    '部分符合',
-                    '小部分符合',
-                    '完全不符合',
-                ]
-            },
-            {
-                title: '表达生动有趣，善于描述、讲故事等。',
-                question: [
-                    '完全符合',
-                    '大致符合',
-                    '部分符合',
-                    '小部分符合',
-                    '完全不符合',
-                ]
-            },
-            {
-                title: '对运用数字、符号、概念等很敏感，抽象思考能力强。',
-                question: [
-                    '完全符合',
-                    '大致符合',
-                    '部分符合',
-                    '小部分符合',
-                    '完全不符合',
-                ]
-            },
-            {
-                title: '绘图能力优异，作品充满画趣。',
-                question: [
-                    '完全符合',
-                    '大致符合',
-                    '部分符合',
-                    '小部分符合',
-                    '完全不符合',
-                ]
-            },
-            {
-                title: '能运用多种多样的动作来表现一个事物。',
-                question: [
-                    '完全符合',
-                    '大致符合',
-                    '部分符合',
-                    '小部分符合',
-                    '完全不符合',
-                ]
-            },
-            {
-                title: '是否喜欢计算机',
-                question: [
-                    '很喜欢',
-                    '一般喜欢',
-                    '不知道',
-                    '不喜欢',
-                    '很不喜欢',
-                ]
-            }
         ],
-
+        select: [
+            '完全符合',
+            '大致符合',
+            '部分符合',
+            '小部分符合',
+            '完全不符合',
+        ],
     },
 
 
     onLoad() {
+        this.getQuestionList()
         wx.showModal({
             title: '答题说明',
             content: '表内每一叙述之后均有五个选项，依照层次高低排列。请按照你实际行为表现与题目相符的程度，勾选适当的选项：完全不符选择1，小部分符合选择2，部分符合选择3，大致符合选择4，完全符合选择5。',
@@ -242,49 +43,135 @@ Page({
             confirmText: '知悉',
             confirmColor: '#0cf'
         })
+
     },
 
-    submit() {
-        wx.showModal({
-            title: '确认',
-            content: '确定提交吗？',
-            confirmText: '提交',
-            confirmColor: '#0cf',
-            success: res => {
+    submit(e) {
+        let answer = e.detail;
+        let resForecast = {};
+        //确认是否提交
+        yy.showModal({
+                title: '确认',
+                content: '确定提交吗？',
+                confirmText: '提交',
+                confirmColor: '#0cf',
+            })
 
+            .then(res => {
+                //提交
                 if (res.confirm) {
-                    wx.showLoading({
+                    let data = this.handleData(answer)
+                    return yy.showLoading({
                         title: '急速预测中...',
-                        mask: true,
-                        success: res => {
-                            setTimeout(function() {
-                                wx.hideLoading({
-                                    success: res => {
-                                        wx.showModal({
-                                            title: '预测成功',
-                                            content: '感谢您的参与！',
-                                            showCancel: false,
-                                            confirmText: '预测结果',
-                                            confirmColor: '#0cf',
-                                            success: res => {
-                                                if (res.confirm) {
-                                                    wx.navigateTo({
-                                                        url: '/pages/res/res',
-                                                    })
+                        mask: true
+                    })
+                } else { //暂不提交
+                    throw 'err'
+                }
+            })
 
-                                                }
-                                            }
-                                        })
-                                    }
-                                })
+            //提交——》发送问卷填写结果
+            .then(res => {
 
-                            }, 1500)
-                        }
+                let url = g.ip + g.request.submitForecastQuestionnaire
+
+                let data = this.handleData(answer)
+
+                return yy.request({
+                    url,
+                    data,
+                    method: 'post'
+                })
+            })
+
+            //获取预测结果
+            .then(res => {
+                wx.hideLoading({})
+                console.log(res,'预测结果')
+                if (res.data.code === 200) {
+                    resForecast = res.data.data; 
+                    return yy.showModal({
+                        title: '预测成功',
+                        content: '感谢您的参与！',
+                        showCancel: false,
+                        confirmText: '预测结果',
+                        confirmColor: '#0cf',
                     })
 
-
+                }else{
+                    wx.showToast({
+                        title: res.data.message,
+                        icon: 'none',
+                        mask: true,
+                    })
+                    throw 'err'
                 }
-            }
-        })
+
+            })
+
+            //跳转页面
+            .then(res => {
+
+                if (res.confirm) {
+                    let data = JSON.stringify(resForecast)
+                    wx.reLaunch({
+                        url: '/pages/res/res?data=' + data
+                    })
+                }else{
+                    throw 'err'
+                }
+            })
+            .catch(err=>{
+                console.log(err)
+            })
+
+
+    },
+
+    getQuestionList() {
+        let url = g.ip + g.request.getQuestion;
+        yy.request({
+                url
+            })
+            .then(res => {
+                //新数据
+                let data = res.data.data
+
+                //获取选项（5选项）
+                let select = this.data.select
+
+                //获取旧数据
+                let oldData = this.data.questionData
+
+
+                //处理数据
+                for (var i = 0; i < data.length; i++) {
+                    let temp = {};
+                    temp.title = data[i].question;
+                    temp.question = select;
+                    oldData.push(temp)
+                }
+
+                this.setData({
+                    questionData: oldData
+                })
+            })
+    },
+
+
+    handleData(data) {
+
+        let res = {
+            uid: g.userData.id,
+            grade: Number(data[0]) === -1 ? -1 : Number(data[0]) + 1,
+            college: "计算机学院",
+        }
+
+        for (let i = 2; i < data.length; i++) {
+            let index = `question${i - 1}`;
+            res[index] = Number(data[i]) === -1 ? -1 : Number(data[i]) + 1;
+        }
+
+        return res;
     },
 })
